@@ -78,9 +78,21 @@ async function logAssignment(variant, userId) {
 }
 
 /**
+ * Set up Google Apps Script URL with predefined endpoint
+ */
+function setupGASUrl() {
+    const GAS_URL = 'https://script.google.com/macros/s/AKfycbzqkrN677A0HNvsOLDJ4DNijANV7GWldx_6QMhs0mkH23hMCD8GD0tdDFRGbtLutxlk/exec';
+    localStorage.setItem('gas_url', GAS_URL);
+    console.log('GAS URL configured:', GAS_URL);
+}
+
+/**
  * Perform redirect to assigned variant
  */
 async function performRedirect() {
+    // Set up GAS URL
+    setupGASUrl();
+    
     // Add small delay for user experience (shows loading animation)
     await new Promise(resolve => setTimeout(resolve, 1500));
     

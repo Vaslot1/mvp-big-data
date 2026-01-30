@@ -87,9 +87,10 @@ git push origin main
    - Copy the `/exec` URL
 
 3. **Configure Web App URL:**
-   - Visit your deployed site
-   - The original index.html from the template will show
-   - Enter your Web App URL and click "Save URL"
+   - The Google Apps Script URL is already pre-configured
+   - Visit: `https://YOUR_USERNAME.github.io/telegram-emoji-ab-test/config.html`
+   - Click "Test Connection" to verify integration
+   - The A/B test will work automatically
 
 ## 📊 Data Collection
 

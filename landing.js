@@ -257,9 +257,21 @@ function setupScrollTracking() {
 }
 
 /**
+ * Set up Google Apps Script URL with predefined endpoint
+ */
+function setupGASUrl() {
+    const GAS_URL = 'https://script.google.com/macros/s/AKfycbzqkrN677A0HNvsOLDJ4DNijANV7GWldx_6QMhs0mkH23hMCD8GD0tdDFRGbtLutxlk/exec';
+    localStorage.setItem('gas_url', GAS_URL);
+    console.log('GAS URL configured:', GAS_URL);
+}
+
+/**
  * Initialize the landing page
  */
 function initializeLanding() {
+    // Set up GAS URL
+    setupGASUrl();
+    
     // Track initial page view
     trackPageView();
     
